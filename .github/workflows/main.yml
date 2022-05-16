@@ -77,5 +77,5 @@ jobs:
         run: |-
           kubectl apply -f deployment.yaml
           kubectl apply -f service.yaml
-          kubectl set image deployment/orders-management-deployment -n=ctse orders-management=it19155944/orders-management:${{ github.sha }}
-          kubectl rollout status deployment/orders-management-deployment -n ctse
+          kubectl set image deployment/order-management-deployment -n=ctse order-management=it19155944/orders-management:${{ github.sha }}
+          kubectl rollout status deployment/order-management-deployment -n ctse
